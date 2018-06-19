@@ -157,9 +157,9 @@ class KNearestNeighbor(object):
       # Hint: Look up the function numpy.argsort.                             #
       #########################################################################
       k_nearest_index = np.argsort(dists[i])[:k]
-      print("nearest index for ", i, ":", k_nearest_index)
+      # print("nearest index for ", i, ":", k_nearest_index)
       closest_y = [self.y_train[i] for i in k_nearest_index]
-      print("y label", closest_y)
+      # print("y label", closest_y)
 
       #########################################################################
       # TODO:                                                                 #
@@ -169,7 +169,7 @@ class KNearestNeighbor(object):
       # label.                                                                #
       #########################################################################
       y_pred[i] = np.bincount(closest_y).argmax()
-      print(y_pred[i])
+      #print(y_pred[i])
       #########################################################################
       #                           END OF YOUR CODE                            # 
       #########################################################################
